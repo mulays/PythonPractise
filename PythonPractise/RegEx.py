@@ -20,3 +20,15 @@ print match
 match = re.search(r'pune', 'dog cat dog cat pune cat cat cat')
 print match.start()
 print match.end()
+
+*** Remote Interpreter Reinitialized  ***
+>>> 
+this is my new name 
+plate
+this is my new name \nplate
+None
+cat
+['cat', 'cat']
+16
+20
+>>> 
