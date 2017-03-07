@@ -1,0 +1,156 @@
+Request for REST 
+subprocesses, os, subprcess.call
+json
+pickle serialize /deserialize pickle.loads, pickle.dump
+
+
+c compiler for windows msi file, numpy ,pandas 
+
+deque, 
+
+
+split takes 2 argument
+str = snehal 
+print 
+
+l1[::-1] = to reverse the string
+
+regular expression : 
+------------------------------------------------
+string = "this is my new name \nplate"
+stringreg = r"this is my new name \nplate"
+
+print string
+print stringreg
+
+output :
+string = "this is my new name \nplate"
+stringreg = r"this is my new name \nplate"
+
+print string
+print stringreg
+--------------------------------------------------
+
+# Interview Questions :
+t1 = open('C:\\Snehal\\test.txt','r+')
+
+data = t1.read()
+data = data.split() # this will give the list of all the words
+print data
+
+# Count number of occurences of a letter f
+for word in data:
+    if word.count('f') >= 3:
+        print word
+
+# Count number of occurences of each word
+dataCount = {}
+for word in data:
+    try:
+        dataCount.update({word : dataCount[word]+1})
+    except:
+        dataCount.update({word :1})
+print dataCount
+t1.close()
+
+----------------------------------------------------
+l1 = ['aa','aa','bb','cc','dd','aa','dd','cc']
+counts = {}
+for i in l1:
+    if i in counts:
+        print "I :",counts[i]
+        counts[i] = counts[i] + 1
+    else :
+        counts[i] = 1
+
+print counts
+# from the book
+from collections import defaultdict
+cnt = defaultdict(int)
+print cnt
+for x in l1:
+    cnt[x] = cnt[x] + 1
+
+print cnt
+
+from collections import Counter
+print "Counter :",Counter(l1) 
+------------------------------------------------------------
+
+
+print "HANDLING EXCEPTION\n"
+i = 6
+
+try:
+    if i==6:
+        print "Value ",i/0
+except:
+    print "Something went wrong"
+
+finally:
+    print "end of the program"
+	
+	
+-----------------------------------------------------------
+Work on these functions :
+    re.match()
+    re.search()
+    re.findall()
+	
+	
+-----------------------------------------------------------
+The way the match() method works is that it will only find matches if they occur at the start of the string being searched.
+
+re.match(r'dog','dog cat dog mouse dog')
+match = re.match(r'dog','dog cat dog mouse dog')
+print match.group(0)
+
+output : 
+dog
+-----------------------------------------------------------
+re.match(r'dog','dog cat dog mouse dog')
+match = re.match(r'dog','dog cat dog mouse dog')
+print match
+output : <_sre.SRE_Match object at 0x03891170>
+It returns the object
+
+-----------------------------------------------------------
+re.match(r'dog','dog cat dog mouse dog')
+match = re.match(r'cat','dog cat dog mouse dog')
+print match
+output : None
+-----------------------------------------------------------
+
+The search() method is similar to match(), but search() doesn’t restrict us to only finding matches at the beginning of the string
+
+
+match = re.search(r'cat','dog cat dog cat dog')
+print match.group(0)
+
+this prints cat
+
+-------------------------------------------------------------
+The search() method, however, stops looking after it finds a match, so search()-ing for ‘dog’ in our example string only finds the first occurrence:
+For all the ocurrences use below
+-------------------------------------------------------------
+
+match = re.findall(r'cat','dog cat dog cat dog')
+print match
+
+this returns list : ['cat', 'cat'] 
+
+if u pring match.group(0), it will throw error saying AttributeError list has no attribute group
+
+------------------------------------------------------------------------
+
+match = re.search(r'pune', 'dog cat dog cat pune cat cat cat')
+print match.start()
+print match.end()
+
+
+
+
+
+
+
+
