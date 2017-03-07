@@ -1,5 +1,6 @@
 import re
 
+# Refered link : http://www.thegeekstuff.com/2014/07/python-regex-examples
 string = "this is my new name \nplate"
 stringreg = r"this is my new name \nplate"
 
