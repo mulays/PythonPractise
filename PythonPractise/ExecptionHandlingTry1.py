@@ -25,5 +25,5 @@ In C
 Exception Block :  'list' object is not callable
 Program completed
 
-if try catch is not written , it will only print  In A , In B and it will error out
+if try catch is not written , it will print A, B, C and then it errors out and the last statement "Program Completed" does not get executed
 '''
