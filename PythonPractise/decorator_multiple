@@ -1,0 +1,49 @@
+def my_decorator1(some_function):
+    def wrapper():
+        print("In decorator 1")
+        some_function()
+        print("Something 1")
+    return wrapper
+
+def my_decorator2(some_function):
+    def wrapper():
+        print("In decorator 2")
+        some_function()
+        print("Something 2")
+    return wrapper
+
+@my_decorator1  # deco2 will be passed as an argument
+@my_decorator2  # fun will be passed as an argument
+def just_some_function():
+    print("Wheee!")
+
+just_some_function()
+
+print "Another program"
+print "create decorator, create new fun inside it , call the fun u want to execute and return the new function"
+def deco1(fun1):
+    def new():
+        print "In deco1"
+        fun1()
+        print "Deco end"
+    return new
+
+@deco1
+def fun():
+    print "In the func"
+    return
+
+fun()
+
+----------------------------------------------
+Output is :
+In decorator 1
+In decorator 2
+Wheee!
+Something 2
+Something 1
+Another program
+create decorator, create new fun inside it , call the fun u want to execute and return the new function
+In deco1
+In the func
+Deco end
